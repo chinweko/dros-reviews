@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dro's Reviews</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #000000;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            overflow: hidden; /* No scrollbars ever */
+        }
+
+        .widget-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .header-left { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 500; }
+        .rating { color: #FFD700; display: flex; align-items: center; gap: 5px; }
+        
+        .google-btn {
+            background-color: #FFD700;
+            color: black;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* The Slider Card */
+        .swiper {
+            width: 100%;
+            padding-bottom: 40px; /* Space for pagination dots */
+        }
+
+        .swiper-slide {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 25px;
+            color: white;
+            height: auto; 
+            min-height: 250px; /* Ensures consistent height */
+            box-sizing: border-box;
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* User Info */
+        .user-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background-color: #333; color: #FFD700;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; flex-shrink: 0;
+        }
+        .name { font-weight: bold; font-size: 15px; }
+        .verified { color: #1DA1F2; margin-left: 4px; font-size: 12px; }
+        .date { font-size: 12px; color: #888; display: block; }
+
+        .stars { color: #FFD700; margin-bottom: 10px; }
+        
+        .review-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #ddd;
+            margin-bottom: 15px;
+            /* Truncate text nicely */
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            margin-top: auto;
+            color: #8ab4f8;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        /* Pagination Dots */
+        .swiper-pagination-bullet { background: #555; opacity: 1; }
+        .swiper-pagination-bullet-active { background: #FFD700; }
+
+    </style>
+</head>
+<body>
+
+    <div class="widget-container">
+        
+        <div class="header">
+            <div class="header-left">
+                <span>Google Reviews</span>
+                <div class="rating">5.0 ★★★★★</div>
+            </div>
+            <a href="https://www.google.com/search?q=dros+moving+pros" target="_blank" class="google-btn">Write a Review</a>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="user-row">
+                        <div class="avatar">N</div>
+                        <div>
+                            <span class="name">Nicolas Vanlaanen <span class="verified">✔</span></span>
+                            <span class="date">5 months ago</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"Truly the best moving experience I’ve ever had. We used Dro’s moving service for a long-distance company office move, and I can't say enough good things."</div>
+                    <a href="#" class="read-more">Read more on Google</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="user-row">
+                        <div class="avatar">P</div>
+                        <div>
+                            <span class="name">Perle Moreau <span class="verified">✔</span></span>
+                            <span class="date">a year ago</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"Wow, where do I begin? I needed a company able to move two VERY heavy yet fragile hand carved buddhas! They maneuvered them perfectly across three locations."</div>
+                    <a href="#" class="read-more">Read more on Google</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="user-row">
+                        <div class="avatar">E</div>
+                        <div>
+                            <span class="name">Erick Razo <span class="verified">✔</span></span>
+                            <span class="date">2 months ago</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"Made what is often a stressful process feel incredibly smooth and easy. I would give them six stars if I could. Their crew works hard to wrap/blanket every fragile item."</div>
+                    <a href="#" class="read-more">Read more on Google</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="user-row">
+                        <div class="avatar">R</div>
+                        <div>
+                            <span class="name">Ruben Diaz <span class="verified">✔</span></span>
+                            <span class="date">1 month ago</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"Dros moving service was a 10/10 service, everything was quick and fast and low cost, love this service and will definitely be using them again!"</div>
+                    <a href="#" class="read-more">Read more on Google</a>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                // Mobile: 1 slide
+                0: {
+                    slidesPerView: 1,
+                },
+                // Tablet: 2 slides
+                700: {
+                    slidesPerView: 2,
+                },
+                // Desktop: 3 slides
+                1000: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
+</body>
+</html>
